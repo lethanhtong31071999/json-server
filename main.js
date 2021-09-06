@@ -52,8 +52,11 @@ router.render = (req, res) => {
   });
 };
 
+// Set port
+const PORT = process.env.PORT || 8000;
+
 // Use default router
 server.use(router);
-server.listen(8000, () => {
-  console.log(`JSON Server is running at http://localhost:8000/`);
+server.listen(PORT, () => {
+  console.log(`JSON Server is running at http://localhost:${PORT}/`);
 });
