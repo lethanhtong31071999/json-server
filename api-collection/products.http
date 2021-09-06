@@ -1,0 +1,50 @@
+@baseUrl=http://localhost:8000
+@resourceName=products
+
+# @name getAll
+GET {{baseUrl}}/{{resourceName}}
+
+###
+# @name filterProducts
+GET {{baseUrl}}/{{resourceName}}?price_gte=800
+###
+GET {{baseUrl}}/{{resourceName}}?color=gold&price_gte=100
+###
+GET {{baseUrl}}/{{resourceName}}?name_like=wood
+
+###
+# @name pagination
+GET {{baseUrl}}/{{resourceName}}?_limit=39&_page=2
+
+###
+# @name sort
+GET {{baseUrl}}/{{resourceName}}?_sort=price&_order=asc
+###
+GET {{baseUrl}}/{{resourceName}}?_sort=color,price&order=asc,desc
+
+
+###
+
+# @name addNew
+POST {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+{
+    "categoryId": "b17fcec8-5777-4c92-a879-e518d747c5a9",
+    "name": "Le Thanh Tong",
+    "color": "lavender",
+    "price": 663,
+    "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+    "thumbnailUrl": "http://placeimg.com/400/400"
+}
+
+###
+
+# @name update
+PATCH {{baseUrl}}/{{resourceName}}/wMgNTBq
+Content-Type: application/json
+
+{
+    "name": "New laptop le thanh tong",
+    "price": 663
+}

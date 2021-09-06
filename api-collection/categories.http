@@ -1,0 +1,16 @@
+@baseUrl=http://localhost:8000
+@resourceName=categories
+
+# @name getAll
+GET {{baseUrl}}/{{resourceName}}
+
+
+###
+# @name addNewCategory
+POST {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+{
+    "name": "Laptop 321"
+}
+
