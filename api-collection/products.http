@@ -6,19 +6,18 @@ GET {{baseUrl}}/{{resourceName}}
 
 ###
 # @name filterProducts
-GET {{baseUrl}}/{{resourceName}}?price_gte=800
+GET {{baseUrl}}/{{resourceName}}?categoriesId=0
 ###
-GET {{baseUrl}}/{{resourceName}}?color=gold&price_gte=100
+GET {{baseUrl}}/{{resourceName}}?salePrices_lte=1500
 ###
-GET {{baseUrl}}/{{resourceName}}?name_like=wood
+GET {{baseUrl}}/{{resourceName}}?name_like=iphone
 
 ###
 # @name pagination
-GET {{baseUrl}}/{{resourceName}}?_limit=39&_page=2
+GET {{baseUrl}}/{{resourceName}}?_limit=39&_page=1
 
 ###
-# @name sort
-GET {{baseUrl}}/{{resourceName}}?_sort=price&_order=asc
+GET {{baseUrl}}/{{resourceName}}?_order=desc&_sort=salePrices&categoriesId=0
 ###
 GET {{baseUrl}}/{{resourceName}}?_sort=color,price&order=asc,desc
 
