@@ -47,9 +47,7 @@ router.render = (req, res) => {
     return res.jsonp(result);
   }
 
-  return res.jsonp({
-    body: res.locals.data,
-  });
+  return res.jsonp(res.locals.data);
 };
 
 // Set port

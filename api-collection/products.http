@@ -18,6 +18,10 @@ GET {{baseUrl}}/{{resourceName}}?_limit=39&_page=1
 
 ###
 GET {{baseUrl}}/{{resourceName}}?_order=desc&_sort=salePrices&categoriesId=0
+
+###
+GET {{baseUrl}}/{{resourceName}}?_order=asc&_sort=rams.64GB.salePrices
+
 ###
 GET {{baseUrl}}/{{resourceName}}?_sort=color,price&order=asc,desc
 
