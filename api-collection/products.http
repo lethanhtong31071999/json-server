@@ -6,7 +6,7 @@ GET {{baseUrl}}/{{resourceName}}
 
 ###
 # @name filterProducts
-GET {{baseUrl}}/{{resourceName}}?colors.value=black
+GET {{baseUrl}}/{{resourceName}}?categoriesId=0&osTypes=IOS&salePrices_gte=2740&salePrices_lte=4740
 ###
 GET {{baseUrl}}/{{resourceName}}?salePrices_lte=1500
 ###
