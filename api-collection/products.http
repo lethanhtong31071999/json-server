@@ -1,4 +1,5 @@
-@baseUrl=http://localhost:8000
+# @baseUrl=http://localhost:8000
+@baseUrl=https://ltt-json-server.herokuapp.com
 @resourceName=products
 
 # @name getAll
@@ -6,7 +7,7 @@ GET {{baseUrl}}/{{resourceName}}
 
 ###
 # @name filterProducts
-GET {{baseUrl}}/{{resourceName}}?categoriesId=0&osTypes=IOS&salePrices_gte=2740&salePrices_lte=4740
+GET {{baseUrl}}/{{resourceName}}?q=iphone
 ###
 GET {{baseUrl}}/{{resourceName}}?salePrices_lte=1500
 ###

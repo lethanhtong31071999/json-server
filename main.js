@@ -34,7 +34,6 @@ router.render = (req, res) => {
   if (req.method === "GET" && totalCountHeader) {
     const paramsString = req._parsedOriginalUrl.query;
     const paramsObject = queryString.parse(paramsString);
-    console.log(paramsObject);
     const result = {
       data: res.locals.data,
       pagination: {
